@@ -1,0 +1,8 @@
+1,1,2,main.out
+2,-1,2,main.in
+3,2,1,main.isEq.out
+4,-1,1,main.isEq.in[0]
+5,-1,1,main.isEq.in[1]
+6,-1,0,main.isEq.isZ.out
+7,-1,0,main.isEq.isZ.in
+8,3,0,main.isEq.isZ.inv

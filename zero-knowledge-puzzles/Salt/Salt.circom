@@ -26,7 +26,7 @@ template Salt() {
     component mimcSponge =  MiMCSponge(3,220,1);
 
     mimcSponge.ins <== [a,b,salt];
-    mimcSponge.k <== 0;
+    mimcSponge.k <== salt;
 
     // Your code here..
     out <== mimcSponge.outs[0];

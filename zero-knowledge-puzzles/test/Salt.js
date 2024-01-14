@@ -29,7 +29,7 @@ describe(" mimcSponge  ", function () {
       { a: "4", b: "4", salt: "2" },
       true
     );
-    console.log(witness[1]);
+    // console.log(witness[1]);
     assert(Fr.eq(Fr.e(witness[0]), Fr.e(1)));
     assert(Fr.eq(Fr.e(witness[1]), Fr.e(expectedOutput)));
 
@@ -37,7 +37,7 @@ describe(" mimcSponge  ", function () {
       { a: "45", b: "1001", salt: "0099" },
       true
     );
-    console.log(witness[1]);
+    // console.log(witness[1]);
     const expectedOutput2 =
       17165551905088735098668729485755579194569447435279436338955576584338338632036n;
     assert(Fr.eq(Fr.e(witness[0]), Fr.e(1)));

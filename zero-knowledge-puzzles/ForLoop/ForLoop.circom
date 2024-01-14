@@ -5,8 +5,16 @@ pragma circom 2.1.4;
 // Using a forLoop , add a[0] and a[1] , 4 times in a row .
 
 template ForLoop() {
+    signal input a[2];
+    signal output c;
+    // Your Code here..
+    var i;
+    signal sum[4];
+    for(i=0;i<4;i++){
+       sum[i] <== a[0] + a[1];
+    }
 
-// Your Code here..
+    c <== sum[1] + sum[2] + sum[3] + sum[0];
 
 }  
 

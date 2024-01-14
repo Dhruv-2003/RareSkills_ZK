@@ -1,5 +1,6 @@
 pragma circom 2.1.4;
 
+include "../node_modules/circomlib/circuits/poseidon.circom";
 
 // Go through the circomlib library and import the poseidon hashing template using node_modules
 // Input 4 variables,namely,'a','b','c','d' , and output variable 'out' .
@@ -7,6 +8,21 @@ pragma circom 2.1.4;
 template poseidon() {
 
    // Your Code here.. 
+   signal input a;
+   signal input b;
+   signal input c;
+   signal input d;
+
+   signal output out;
+
+   component poseidon = Poseidon(4);
+   // poseidon.inputs[0] ==> a;
+   // poseidon.inputs[1] ==> b;
+   // poseidon.inputs[2] ==> c;
+   // poseidon.inputs[3] ==> d;
+   poseidon.inputs <== [a,b,c,d];
+
+   out <== poseidon.out;
 }
 
 component main = poseidon();

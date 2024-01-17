@@ -15,18 +15,21 @@ template Pow() {
    signal temp;
    temp <== a[0];
 
-   signal val;
-   // signal val[totalPow];
-   // val[0] <== a[0];
+   signal value;
+   value <-- temp**totalPow;
 
-   // a[0] <== 1;
-   // task it to calculate a[0] , a[1] times
-   for (var i = 1; i < totalPow; i++) {
-      val <== val * temp;
-   }
+   // signal val;
+   // // signal val[totalPow];
+   // // val[0] <== a[0];
+
+   // // a[0] <== 1;
+   // // task it to calculate a[0] , a[1] times
+   // for (var i = 1; i < totalPow; i++) {
+   //    val <== val * temp;
+   // }
    
    // Your Code here.. 
-   c <== val;
+   c <== value;
 }
 
 component main = Pow();

@@ -10,16 +10,19 @@ template Pow() {
    signal output c;
 
    // could use binomial expansasion
-   signal totalPow <== a[1];
+   var totalPow = a[1];
+   
    signal temp;
    temp <== a[0];
+
    signal val;
+   // signal val[totalPow];
+   // val[0] <== a[0];
+
    // a[0] <== 1;
+   // task it to calculate a[0] , a[1] times
    for (var i = 1; i < totalPow; i++) {
-      // temp <== a[0]*(a[1]-i)
-      // terms[i] <== a[i-1]*temp;
-      val <== temp * a[0];
-      temp <== val;
+      val <== val * temp;
    }
    
    // Your Code here.. 
